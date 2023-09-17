@@ -1,4 +1,3 @@
-
 const tabsLabel = document.querySelectorAll(".tabs__label");
 const tabsBlock = document.querySelectorAll(".tabs-block");
 
