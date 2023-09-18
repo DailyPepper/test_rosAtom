@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const formInput = document.querySelector(".list__input");
   const listItems = document.querySelector(".list__items");
   const listCount = document.querySelector(".list__cnt");
-
+  const checkBoxAdd = document.querySelector(".block__item--odd");
+  const checkBoxAddEven = document.querySelector(".block__item--even");
+  
   let cnt = 1;
 
   form.addEventListener("submit", function (e) {
@@ -47,13 +49,26 @@ document.addEventListener("DOMContentLoaded", function () {
     elem.classList.toggle("completed");
     listItems.insertBefore(elem, listItems.end);
   }
+
+  function handleCheckbox(){
+    if(checkBoxAdd.checked){
+      listItems.classList.add("block__item--odd")
+    } else{
+      listItems.classList.remove("block__item--odd")
+    }
+  }
+
+  checkBoxAdd.addEventListener('change', handleCheckbox)
+
+  function changeCheckboxEven(){
+    if(checkBoxAddEven.checked){
+      listItems.classList.add("block__item--even")
+    } else{
+      listItems.classList.remove("block__item--even")
+    }
+  }
+
+  checkBoxAddEven.addEventListener('change', changeCheckboxEven)
 });
 
-$('.switch-btn').click(function(){
-  $(this).toggleClass('switch-on');
-  if ($(this).hasClass('switch-on')) {
-    $(this).trigger('on.switch');
-  } else {
-    $(this).trigger('off.switch');
-  }
-});
+
