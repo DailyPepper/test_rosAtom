@@ -126,3 +126,27 @@
   .block__item--even li:nth-child(Even) { 
     background-color: #f2f2f2; 
   }
+.block__button-first{
+    background-color: aquamarine;
+    color: rgb(38 32 33);
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    border-radius: 25px;
+}
+.block__button-first:hover{
+    background-color: greenyellow;
+    color: black;
+}
+.block__button-end{
+    background-color: aquamarine;
+    color: rgb(38 32 33);
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    border-radius: 25px;
+}
+.block__button-end:hover{
+    background-color: greenyellow;
+    color: black;
+}
